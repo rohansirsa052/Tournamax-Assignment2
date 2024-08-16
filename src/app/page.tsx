@@ -1,18 +1,13 @@
 'use client'
 import React from 'react'
-import { useRouter } from 'next/navigation';
+
 
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
 const MapComponent = dynamic(() => import('./map/MapComponant'), { ssr: false });
 const page = () => {
-  const router= useRouter();
-
-  const handleClick = (name: string) => {
-    router.push(name);
-  };
-
+ 
   return (
     <div>
       <Head>
